@@ -5,11 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
-import okhttp3.Call
-import okhttp3.Callback
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.Response
+import okhttp3.*
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
@@ -71,7 +67,6 @@ class MainActivity : AppCompatActivity() {
         private const val REPO_NAME = "jsons"
         private const val BRANCH_NAME = "master"
         private const val PATH_TO_FILE = "/test_youtube.json"
-        private const val BASE_URL =
-            "https://raw.githubusercontent.com/$YOUR_GITHUB_USERNAME/$REPO_NAME/$BRANCH_NAME"
+        private const val BASE_URL = "https://raw.githubusercontent.com/$YOUR_GITHUB_USERNAME/$REPO_NAME/$BRANCH_NAME"
     }
 }
