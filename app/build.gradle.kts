@@ -48,8 +48,11 @@ android {
 }
 
 dependencies {
-    implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0")
-    implementation ("androidx.recyclerview:recyclerview:1.2.1") // Use the latest version
+    implementation (libs.core)
+    implementation (libs.androidx.recyclerview)
+    implementation (libs.okhttp)
+    implementation (libs.gson)
+
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
@@ -61,7 +64,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.material)
-    implementation ("com.google.android.material:material:1.4.0") // Use the latest version
+    implementation (libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
