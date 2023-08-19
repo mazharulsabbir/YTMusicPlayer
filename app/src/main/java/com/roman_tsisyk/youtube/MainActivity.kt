@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val YOUR_GITHUB_USERNAME = "RomanTsisyk"
         private const val REPO_NAME = "jsons"
-        private const val BRANCH_NAME = "master"
+        private const val BRANCH_NAME = "elen"
         private const val PATH_TO_FILE = "/test_youtube.json"
         private const val BASE_URL = "https://raw.githubusercontent.com/$YOUR_GITHUB_USERNAME/$REPO_NAME/$BRANCH_NAME"
     }
