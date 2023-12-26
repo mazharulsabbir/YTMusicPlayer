@@ -15,7 +15,7 @@
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.video_list.VideoListActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SingleVideoActivity"
+        <activity android:name=".video_detail.SingleVideoActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />

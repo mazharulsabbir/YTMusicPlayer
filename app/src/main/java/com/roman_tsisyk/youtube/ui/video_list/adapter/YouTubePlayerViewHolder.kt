@@ -1,4 +1,4 @@
-package com.roman_tsisyk.youtube
+package com.roman_tsisyk.youtube.ui.video_list.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -6,6 +6,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstan
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+import com.roman_tsisyk.youtube.R
 
 class YouTubePlayerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private var youTubePlayer: YouTubePlayer? = null
@@ -31,19 +32,22 @@ class YouTubePlayerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             currentVideoId?.let { youTubePlayer.cueVideo(it, 0f) }
         }
 
-        override fun onStateChange(youTubePlayer: YouTubePlayer, state: PlayerConstants.PlayerState) {
+        override fun onStateChange(
+            youTubePlayer: YouTubePlayer,
+            state: PlayerConstants.PlayerState
+        ) {
             when (state) {
                 PlayerConstants.PlayerState.VIDEO_CUED -> overlayView.show()
                 else -> overlayView.hide()
             }
         }
     }
-}
 
-private fun View.show() {
-    this.visibility = View.VISIBLE
-}
+    private fun View.show() {
+        this.visibility = View.VISIBLE
+    }
 
-private fun View.hide() {
-    this.visibility = View.GONE
+    private fun View.hide() {
+        this.visibility = View.GONE
+    }
 }
