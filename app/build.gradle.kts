@@ -10,10 +10,10 @@ android {
 
     defaultConfig {
         applicationId = "com.roman_tsisyk.youtube"
-        minSdk = 28
+        minSdk = 31
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -24,7 +24,10 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -48,11 +51,12 @@ android {
 }
 
 dependencies {
-    implementation (libs.core)
-    implementation (libs.androidx.recyclerview)
-    implementation (libs.okhttp)
-    implementation (libs.gson)
 
+
+    implementation(libs.core)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.okhttp)
+    implementation(libs.gson)
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
@@ -63,8 +67,12 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx.v231)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.material)
-    implementation (libs.material)
+    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)

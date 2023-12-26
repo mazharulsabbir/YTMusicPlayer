@@ -1,6 +1,8 @@
 [versions]
-agp = "8.2.0-alpha15"
+agp = "8.2.0"
+androidx-lifecycle-runtime-ktx = "2.3.1"
 core = "12.1.0"
+core-splashscreen = "1.0.1"
 gson = "2.10"
 kotlin = "1.8.10"
 core-ktx = "1.10.1"
@@ -17,6 +19,10 @@ constraintlayout = "2.1.4"
 material = "1.9.0"
 
 [libraries]
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "core-splashscreen" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "androidx-lifecycle-runtime-ktx" }
+androidx-lifecycle-runtime-ktx-v231 = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle-runtime-ktx" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle-runtime-ktx" }
 core = { module = "com.pierfrancescosoffritti.androidyoutubeplayer:core", version.ref = "core" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }

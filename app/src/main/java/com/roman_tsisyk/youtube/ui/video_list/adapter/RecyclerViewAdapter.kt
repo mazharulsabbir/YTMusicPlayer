@@ -1,9 +1,9 @@
-package com.roman_tsisyk.youtube
+package com.roman_tsisyk.youtube.ui.video_list.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.lifecycle.Lifecycle
 import androidx.recyclerview.widget.RecyclerView
+import com.roman_tsisyk.youtube.R
 
 internal class RecyclerViewAdapter(
     private val videoIds: List<String>

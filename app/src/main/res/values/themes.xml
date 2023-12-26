@@ -2,4 +2,11 @@
 <resources>
 
     <style name="Theme.YouTubeApp" parent="android:Theme.Material.Light.NoActionBar" />
+
+<!--    <style name="Theme.YourApp.Starting" parent="Theme.SplashScreen">-->
+<!--        <item name="windowSplashScreenBackground">@color/cardview_light_background</item>-->
+<!--        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>-->
+<!--        <item name="postSplashScreenTheme">Theme.YouTubeApp</item>-->
+<!--    </style>-->
+
 </resources>

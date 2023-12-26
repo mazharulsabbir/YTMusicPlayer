@@ -1,50 +1,46 @@
-package com.roman_tsisyk.youtube
+package com.roman_tsisyk.youtube.video_detail
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+import com.roman_tsisyk.youtube.R
 
 class SingleVideoActivity : AppCompatActivity() {
 
     private lateinit var youTubePlayerView: YouTubePlayerView
+    private lateinit var viewModel: SingleVideoViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_video)
 
+        viewModel = ViewModelProvider(this)[SingleVideoViewModel::class.java]
+
         youTubePlayerView = findViewById(R.id.single_youtube_player_view)
         youTubePlayerView.enableBackgroundPlayback(true)
 
-        if (Intent.ACTION_SEND == intent.action && "text/plain" == intent.type) {
-            val sharedText = intent.getStringExtra(Intent.EXTRA_TEXT)
-            if (sharedText != null && isYouTubeLink(sharedText)) {
-                val videoId = extractVideoId(sharedText)
-                initializePlayer(videoId)
-            }
+        // Observe the ViewModel's LiveData
+        viewModel.videoId.observe(this) { videoId ->
+            initializePlayer(videoId)
         }
+
+        // Process the intent
+        intent?.takeIf { it.action == Intent.ACTION_SEND && it.type == "text/plain" }
+            ?.getStringExtra(Intent.EXTRA_TEXT)?.let { sharedText ->
+                viewModel.processSharedText(sharedText)
+            }
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        // Manually release the player when the activity is destroyed
         youTubePlayerView.release()
     }
 
-    private fun isYouTubeLink(url: String): Boolean {
-        return url.contains("youtube.com/watch?v=") || url.contains("youtu.be/")
-    }
-
-    private fun extractVideoId(url: String): String {
-        if (url.contains("youtube.com/watch?v=")) {
-            return url.split("v=")[1].substring(0, 11)
-        } else if (url.contains("youtu.be/")) {
-            return url.split("be/")[1].substring(0, 11)
-        }
-        return ""
-    }
 
     private fun initializePlayer(videoId: String) {
         youTubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
