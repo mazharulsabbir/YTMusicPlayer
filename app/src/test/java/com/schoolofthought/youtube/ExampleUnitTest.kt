@@ -1,4 +1,4 @@
-package com.roman_tsisyk.youtube
+package com.schoolofthought.youtube
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.roman_tsisyk.youtube.video_detail
+package com.schoolofthought.youtube.video_detail
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

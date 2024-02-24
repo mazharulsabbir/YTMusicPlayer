@@ -1,11 +1,11 @@
-package com.roman_tsisyk.youtube.ui.splash
+package com.schoolofthought.youtube.ui.splash
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.roman_tsisyk.youtube.ui.video_list.VideoListActivity
-import com.roman_tsisyk.youtube.ui.video_list.VideoListViewModel
+import com.schoolofthought.youtube.ui.video_list.VideoListActivity
+import com.schoolofthought.youtube.ui.video_list.VideoListViewModel
 
 class SplashActivity : Activity() {
 

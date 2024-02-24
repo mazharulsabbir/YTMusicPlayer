@@ -1,4 +1,4 @@
-package com.roman_tsisyk.youtube.ui.video_list.adapter
+package com.schoolofthought.youtube.ui.video_list.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -6,7 +6,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstan
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-import com.roman_tsisyk.youtube.R
+import com.schoolofthought.youtube.R
 
 class YouTubePlayerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private var youTubePlayer: YouTubePlayer? = null

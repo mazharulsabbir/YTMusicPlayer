@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.roman_tsisyk.youtube"
+    namespace = "com.schoolofthought.youtube"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.roman_tsisyk.youtube"
+        applicationId = "com.schoolofthought.youtube"
         minSdk = 31
         targetSdk = 34
         versionCode = 2
@@ -51,8 +51,6 @@ android {
 }
 
 dependencies {
-
-
     implementation(libs.core)
     implementation(libs.androidx.recyclerview)
     implementation(libs.okhttp)
@@ -73,6 +71,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.material)
     implementation(libs.material)
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)

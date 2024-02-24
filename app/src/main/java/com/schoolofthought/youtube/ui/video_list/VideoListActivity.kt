@@ -1,12 +1,12 @@
-package com.roman_tsisyk.youtube.ui.video_list
+package com.schoolofthought.youtube.ui.video_list
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.roman_tsisyk.youtube.R
-import com.roman_tsisyk.youtube.ui.video_list.adapter.RecyclerViewAdapter
+import com.schoolofthought.youtube.R
+import com.schoolofthought.youtube.ui.video_list.adapter.RecyclerViewAdapter
 
 
 class VideoListActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.roman_tsisyk.youtube.video_detail
+package com.schoolofthought.youtube.video_detail
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-import com.roman_tsisyk.youtube.R
+import com.schoolofthought.youtube.R
 
 class SingleVideoActivity : AppCompatActivity() {
 

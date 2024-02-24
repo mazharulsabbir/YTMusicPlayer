@@ -1,10 +1,10 @@
-package com.roman_tsisyk.youtube.ui.video_list
+package com.schoolofthought.youtube.ui.video_list
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
-import com.roman_tsisyk.youtube.data.model.GithubVideoResponse
+import com.schoolofthought.youtube.data.model.GithubVideoResponse
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.OkHttpClient
@@ -52,8 +52,8 @@ class VideoListViewModel : ViewModel() {
 
 
     companion object {
-        private const val YOUR_GITHUB_USERNAME = "RomanTsisyk"
-        private const val REPO_NAME = "YTubeBackplay"
+        private const val YOUR_GITHUB_USERNAME = "mazharulsabbir"
+        private const val REPO_NAME = "YTMusicPlayer"
         private const val BRANCH_NAME = "master"
         private const val PATH_TO_FILE = "/test_youtube.json"
         private const val BASE_URL =

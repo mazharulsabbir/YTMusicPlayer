@@ -1,9 +1,9 @@
-package com.roman_tsisyk.youtube.ui.video_list.adapter
+package com.schoolofthought.youtube.ui.video_list.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.roman_tsisyk.youtube.R
+import com.schoolofthought.youtube.R
 
 internal class RecyclerViewAdapter(
     private val videoIds: List<String>
