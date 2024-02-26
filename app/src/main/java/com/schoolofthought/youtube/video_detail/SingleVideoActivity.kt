@@ -29,11 +29,18 @@ class SingleVideoActivity : AppCompatActivity() {
             initializePlayer(videoId)
         }
 
-        // Process the intent
-        intent?.takeIf { it.action == Intent.ACTION_SEND && it.type == "text/plain" }
-            ?.getStringExtra(Intent.EXTRA_TEXT)?.let { sharedText ->
-                viewModel.processSharedText(sharedText)
-            }
+        // Get the intent
+        val intent = intent
+        if (intent?.getStringExtra(EXTRA_VIDEO_URL) != null) {
+            val videoUrl = intent.getStringExtra(EXTRA_VIDEO_URL)
+            viewModel.processSharedText(videoUrl!!)
+        } else {
+            // Process the intent
+            intent?.takeIf { it.action == Intent.ACTION_SEND && it.type == "text/plain" }
+                ?.getStringExtra(Intent.EXTRA_TEXT)?.let { sharedText ->
+                    viewModel.processSharedText(sharedText)
+                }
+        }
     }
 
     override fun onDestroy() {
@@ -48,5 +55,9 @@ class SingleVideoActivity : AppCompatActivity() {
                 youTubePlayer.loadVideo(videoId, 0f)
             }
         })
+    }
+
+    companion object {
+        const val EXTRA_VIDEO_URL = "com.schoolofthought.youtube.video_detail.EXTRA_VIDEO_URL"
     }
 }
